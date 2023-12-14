@@ -2,6 +2,7 @@ package kz.internjava.TeleIntern.controller;
 
 import kz.internjava.TeleIntern.model.Category;
 import kz.internjava.TeleIntern.service.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/categories")
 public class CategoryController {
 
-
+    @Autowired
     private final CategoryService categoryService;
 
     public CategoryController(CategoryService categoryService) {
